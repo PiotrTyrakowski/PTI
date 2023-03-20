@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>Losowy film</title>
+    <script>
+        function randomizeFilm() {
+            var filmLinks = [
+                'https://drive.google.com/file/d/1_lt_ITyoTo1nKXAlaell_CZPEYotBdJf/view?usp=share_link',
+                'https://drive.google.com/file/d/1_oUs6Il8bWzbZNUGOQU8OoNRzBuvH9jJ/view?usp=share_link',
+                'https://drive.google.com/file/d/1_qbacMNbA-ETuWj5JV0WkjxqlYa82ni7/view?usp=share_link',
+                'https://drive.google.com/file/d/1_tK-85hVORfElTJ2nr2cF7ipIHwj9C0c/view?usp=share_link',
+                'https://drive.google.com/file/d/1_tc89YqvpkMUj8CPPiZ4UfJmdgQdZDdJ/view?usp=share_link',
+                'https://drive.google.com/file/d/1_zQaXV95ffZeGV-6uMLGGcjCsJ2b95vp/view?usp=share_link',
+                'https://drive.google.com/file/d/1_zh1eAaQxxYp2CXpkAB2IRAnHN50KEqn/view?usp=share_link',
+                'https://drive.google.com/file/d/1a0T2aP9UEfAut7VhVvV-1JmUGYjnI5Ng/view?usp=share_link',
+                'https://drive.google.com/file/d/1a1lpfPUNR_voqWqDAt2wkD2tQS77bjsG/view?usp=share_link',
+                'https://drive.google.com/file/d/1a2kqN38lpbnTkyZysIunUF10JLHR3YbU/view?usp=share_link',
+                'https://drive.google.com/file/d/1a7zyE-HkJPkQfIaISTreLUXl_9ikf8h6/view?usp=share_link',
+                'https://drive.google.com/file/d/1a8d6OErgP3hL82eyXeqLYV2gGTE9Hf3O/view?usp=share_link',
+                'https://drive.google.com/file/d/1a9GdsbmCcNW1HwZVHEHJ9OrNux54SSJI/view?usp=share_link',
+                'https://drive.google.com/file/d/1a9oYkhj5JqdStuqFRCjuqlGdsXr9xYLa/view?usp=share_link',
+                'https://drive.google.com/file/d/1aA_Aq8ixP2OTPrwrUHyRgDmaO0w18whl/view?usp=share_link',
+                'https://drive.google.com/file/d/1aBXKnLUw0OUYabkz17alCV2JnEC-29p_/view?usp=share_link',
+                'https://drive.google.com/file/d/1aBcu9eg-NDe8cQLJwzaMC3gTIpFnJYy2/view?usp=share_link',
+                'https://drive.google.com/file/d/1aDFPSIf5WLEFCzhHRFHyRm487L6F9Z0Q/view?usp=share_link',
+                'https://drive.google.com/file/d/1aGwgU_R0chxhFwvdelMny7p4sTPcTnMR/view?usp=share_link',
+                'https://drive.google.com/file/d/1aHKSBHkdJf2icJe9wmnbnOBD3JVl5P5a/view?usp=share_link',
+                'https://drive.google.com/file/d/1aHRC20-VL9qt4SEKutEpnFOSty4yhs4F/view?usp=share_link',
+                'https://drive.google.com/file/d/1aIiXLLbVOx3FI6adAgmHUg33Cv88CZxy/view?usp=share_link',
+                'https://drive.google.com/file/d/1aLkGVIf_K4bLkL-K-ZWFkwh1l649jOiz/view?usp=share_link',
+                'https://drive.google.com/file/d/1aOl4QW9nen_tN6jqOWYy2P5UuNPeaO3A/view?usp=share_link'
+
+
+
+
+            ];
+
+            var randomIndex = Math.floor(Math.random() * filmLinks.length);
+            var randomLink = filmLinks[randomIndex];
+            window.location.href = randomLink;
+        }
+    </script>
 </head>
 <body>
-    <h1>Welcome to my website!</h1>
-    <a href="form.html"><button>Go to the form</button></a>
+    <button onclick="randomizeFilm()">Wejdź w ankietę z losowym filmem</button>
 </body>
 </html>
