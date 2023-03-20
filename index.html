@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Losowy film</title>
+    <script>
+        function randomizeFilm() {
+            var filmLinks = [
+                'LINK1',
+                'LINK2',
+                // ...
+                'LINK16'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * filmLinks.length);
+            var randomLink = filmLinks[randomIndex];
+            window.location.href = randomLink;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="randomizeFilm()">Wejdź w ankietę z losowym filmem</button>
+</body>
+</html>
