@@ -5,19 +5,36 @@
     <script>
         function randomizeFilm() {
             var filmLinks = [
-                'LINK1',
-                'LINK2',
-                // ...
-                'LINK16'
+            'https://drive.google.com/file/d/1_lt_ITyoTo1nKXAlaell_CZPEYotBdJf/view?usp=share_link',
+                'https://drive.google.com/file/d/1_oUs6Il8bWzbZNUGOQU8OoNRzBuvH9jJ/view?usp=share_link',
+                'https://drive.google.com/file/d/1_qbacMNbA-ETuWj5JV0WkjxqlYa82ni7/view?usp=share_link'
             ];
 
             var randomIndex = Math.floor(Math.random() * filmLinks.length);
             var randomLink = filmLinks[randomIndex];
-            window.location.href = randomLink;
+            document.getElementById("film").src = randomLink;
+            document.getElementById("ankieta").style.display = "block";
         }
     </script>
+    <style>
+        #ankieta {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <button onclick="randomizeFilm()">Wejdź w ankietę z losowym filmem</button>
+    <br>
+    <iframe id="film" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    <div id="ankieta">
+        <h2>Odpowiedz na pytania:</h2>
+        <form action="submit.php" method="post"> <!-- <form action="URL_PRZESYŁANIA_ODPOWIEDZI" method="post"> -->
+            <label for="szczęśliwy">Szczęśliwy (1-10):</label>
+            <input type="number" id="szczęśliwy" name="szczęśliwy" min="1" max="10" required>
+            <!-- Dodaj tutaj kolejne pytania -->
+            <br>
+            <input type="submit" value="Wyślij">
+        </form>
+    </div>
 </body>
 </html>
